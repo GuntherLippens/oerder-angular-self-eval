@@ -1,6 +1,6 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import {Item} from '../classes/item-class';
-import {ItemServiceService} from '../services/item-service.service';
+import {Item} from '../../classes/item-class';
+import {ItemServiceService} from '../../services/item-service.service';
 import {ItemListComponent} from '../item-list/item-list.component';
 
 @Component({

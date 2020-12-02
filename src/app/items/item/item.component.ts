@@ -1,7 +1,7 @@
 import { Component, Input, OnInit} from '@angular/core';
-import { Item } from '../classes/item-class';
+import { Item } from '../../classes/item-class';
 import { Location } from '@angular/common';
-import { ItemServiceService } from '../services/item-service.service';
+import { ItemServiceService } from '../../services/item-service.service';
 import { ActivatedRoute} from '@angular/router';
 
 

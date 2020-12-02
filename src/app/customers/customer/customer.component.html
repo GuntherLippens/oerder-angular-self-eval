@@ -1,0 +1,27 @@
+<div *ngIf="customer">
+  <h2>{{customer.firstname | uppercase}} {{customer.lastname | uppercase}} Details</h2>
+  <div><span>
+
+    </span>
+  </div>
+  <div>
+    <label> First name:
+      <input size="20" [(ngModel)]="customer.firstname" placeholder="name"/>
+    </label>
+    <br/><br/>
+  </div>
+  <div>
+    <label> Last name :
+      <input size="20" maxlength="255" [(ngModel)]="customer.lastname" placeholder="description"/>
+    </label>
+    <br/><br/>
+  </div>
+  <br/>
+
+
+</div>
+
+<br/>
+<button (click)="save()">save</button>
+<br/><br/>
+<button (click)="goBack()">Continue shopping</button>

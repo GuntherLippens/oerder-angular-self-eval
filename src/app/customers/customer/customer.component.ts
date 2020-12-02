@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Customer} from '../classes/customer-class';
+import {Customer} from '../../classes/customer-class';
 import {ActivatedRoute} from '@angular/router';
-import {CustomerServiceService} from '../services/customer-service.service';
+import {CustomerServiceService} from '../../services/customer-service.service';
 import {Location} from '@angular/common';
 
 @Component({
@@ -29,7 +29,7 @@ export class CustomerComponent implements OnInit {
     // const id = +this.route.snapshot.paramMap.get('id');
     // console.log(555 + id);
     // @ts-ignore
-    console.log(this.route.snapshot.paramMap.params.id);
+    console.log(this.route.snapshot.paramMap);
     // @ts-ignore
     const idBis = this.route.snapshot.paramMap.params.id;
     this.customerService.getCustomer(idBis.toString())

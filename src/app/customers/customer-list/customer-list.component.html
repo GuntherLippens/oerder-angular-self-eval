@@ -1,0 +1,22 @@
+<ul class="customers">
+  <li *ngFor="let customer of customers">
+    <a routerLink="/customer-detail/{{customer.id}}">
+      <span class="badge">
+
+        FirstName : {{customer.firstname}} <br/>
+        LastName :  {{customer.lastname}} <br/>
+
+
+             <img width="150px"
+                  src="../../../assets/happy-customers.png"
+                  alt="computer picture">
+              <br/>
+            <button class="delete"
+                    title="delete customer"
+                    (click)="delete(customer)">
+                          (todo) delete
+            </button>
+      </span>
+    </a>
+  </li>
+</ul>
