@@ -1,0 +1,30 @@
+<ul class="items">
+  <li *ngFor="let item of items">
+    <a routerLink="/detail/{{item.id}}">
+      <span class="badge">
+
+        Name : {{item.name}} <br/>
+        Price : $ {{item.price}} <br/>
+        Description : {{item.description}} <br/>
+
+        <span [ngClass]="{
+                'low' : item.amountOfStock <= 3,
+                'medium' : item.amountOfStock < 10 && item.amountOfStock > 3,
+                'high' : item.amountOfStock >= 10
+                }">
+          <br/>
+          [{{item.amountOfStock}}]
+        </span> items available <br/>
+             <img width="150px"
+                  src="./assets/computer.jpg"
+                  alt="computer picture">
+              <br/>
+            <button class="delete"
+                    title="delete item"
+                    (click)="delete(item)">
+                          (todo) delete
+            </button>
+      </span>
+    </a>
+  </li>
+</ul>

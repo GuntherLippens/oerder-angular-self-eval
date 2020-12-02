@@ -1,0 +1,29 @@
+<div>
+  <h2><strong>Save a new item</strong></h2>
+  <p>
+        <label>Item name:
+        <input class="wide" #itemName />
+         </label>
+  </p>
+  <p>
+      <label>Item description:
+        <input #itemDescription />
+      </label>
+  </p>
+  <p>
+  <label>Item price:
+    <input #itemPrice />
+  </label>
+  </p>
+  <p>
+  <label>Item amount of stock:
+    <input #itemAmountOfStock />
+  </label>
+  </p>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(itemName.value, itemDescription.value, itemPrice.value, itemAmountOfStock.value); itemName.value=''">
+    add
+  </button>
+
+</div>
